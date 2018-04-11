@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'NetRequstAPI_Example' do
+  pod 'NetRequstAPI', :path => '../'
+  pod 'YTKNetwork'
+  pod 'AFNetworking', '~> 3.1'
+  target 'NetRequstAPI_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end

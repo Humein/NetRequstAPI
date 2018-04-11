@@ -1,0 +1,22 @@
+{
+  "name": "NetRequstAPI",
+  "version": "0.1.0",
+  "summary": "A short description of NetRequstAPI.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/shou1wang@gmail.com/NetRequstAPI",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "shou1wang@gmail.com": "shou1wang@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/shou1wang@gmail.com/NetRequstAPI.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "NetRequstAPI/Classes/**/*"
+}
