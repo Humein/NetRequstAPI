@@ -10,6 +10,7 @@
 		334E6583207DB4B7005249B9 /* ZTKTestRequestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 334E6582207DB4B7005249B9 /* ZTKTestRequestAPI.m */; };
 		334E6586207DB4ED005249B9 /* ZTKBaseNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 334E6585207DB4ED005249B9 /* ZTKBaseNetRequest.m */; };
 		334E6589207DBE6E005249B9 /* ZTKRequestCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 334E6588207DBE6E005249B9 /* ZTKRequestCodeTool.m */; };
+		334E658C207DBF3E005249B9 /* ZTKRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 334E658B207DBF3E005249B9 /* ZTKRequestModel.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -48,6 +49,8 @@
 		334E6585207DB4ED005249B9 /* ZTKBaseNetRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTKBaseNetRequest.m; sourceTree = "<group>"; };
 		334E6587207DBE6E005249B9 /* ZTKRequestCodeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTKRequestCodeTool.h; sourceTree = "<group>"; };
 		334E6588207DBE6E005249B9 /* ZTKRequestCodeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTKRequestCodeTool.m; sourceTree = "<group>"; };
+		334E658A207DBF3E005249B9 /* ZTKRequestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTKRequestModel.h; sourceTree = "<group>"; };
+		334E658B207DBF3E005249B9 /* ZTKRequestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTKRequestModel.m; sourceTree = "<group>"; };
 		3ED9826324D0B50F95725883 /* Pods-NetRequstAPI_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetRequstAPI_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetRequstAPI_Tests/Pods-NetRequstAPI_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5A1588198DFC2B9FEF3665A9 /* NetRequstAPI.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NetRequstAPI.podspec; path = ../NetRequstAPI.podspec; sourceTree = "<group>"; };
 		5F33FE193706F3818888D994 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				334E6585207DB4ED005249B9 /* ZTKBaseNetRequest.m */,
 				334E6587207DBE6E005249B9 /* ZTKRequestCodeTool.h */,
 				334E6588207DBE6E005249B9 /* ZTKRequestCodeTool.m */,
+				334E658A207DBF3E005249B9 /* ZTKRequestModel.h */,
+				334E658B207DBF3E005249B9 /* ZTKRequestModel.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -396,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				334E658C207DBF3E005249B9 /* ZTKRequestModel.m in Sources */,
 				334E6586207DB4ED005249B9 /* ZTKBaseNetRequest.m in Sources */,
 				6003F59E195388D20070C39A /* ZTKAppDelegate.m in Sources */,
 				334E6589207DBE6E005249B9 /* ZTKRequestCodeTool.m in Sources */,

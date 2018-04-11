@@ -7,7 +7,7 @@
 //
 
 #import "ZTKViewController.h"
-
+#import "ZTKTestRequestAPI.h"
 @interface ZTKViewController ()
 
 @end
@@ -19,7 +19,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
-
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [ZTKTestRequestAPI requestSeckillPayWaWithParameter:nil withSuccess:^(NSString *succMessage, id responseObject, NSInteger succCode) {
+        
+    } andFailure:^(NSString *errorMessage, id result, NSInteger errorCode) {
+        
+    }];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
