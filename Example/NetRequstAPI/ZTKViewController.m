@@ -23,7 +23,7 @@
     [ZTKTestRequestAPI requestSeckillPayWaWithParameter:nil withSuccess:^(NSString *succMessage, id responseObject, NSInteger succCode) {
         
     } andFailure:^(NSString *errorMessage, id result, NSInteger errorCode) {
-        
+        NSLog(@"%@%@%ld",errorMessage,result,(long)errorCode);
     }];
 }
 - (void)didReceiveMemoryWarning

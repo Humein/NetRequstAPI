@@ -12,7 +12,8 @@
 @implementation ZTKTestRequestAPI
 +(void)requestSeckillPayWaWithParameter:(NSDictionary *)dic withSuccess:(Succsess)succsess andFailure:(Failure)failure{
     ZTKTestRequestAPI *requestAPI = [[ZTKTestRequestAPI alloc]init];
-    requestAPI.requestUrl = @"https://ns.huatu.com/u/v3/users/bc/list";
+    NSString *url1 = @"https://ns.huatu.com/u/v3/users/bc/list";
+    requestAPI.requestUrl = url1;
     requestAPI.requestMethod = YTKRequestMethodGET;
     requestAPI.requestArgument = dic;
     requestAPI.requestCompleteFilterBlock = ^(void) {
@@ -60,7 +61,7 @@
         
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
         if(failure){
-            failure([requestAPI.ZTKErrorDic objectForKey:@"message"],nil,0);
+            failure([requestAPI.ZTKErrorDic objectForKey:@"message"],NSStringFromClass([request class]),request.responseStatusCode);
         }
     }];
     

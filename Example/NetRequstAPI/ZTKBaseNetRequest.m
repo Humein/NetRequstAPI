@@ -74,8 +74,8 @@
 -(YTKBaseRequest*)getNetRequestErrorState:(YTKBaseRequest*)request{
     ZTKBaseNetRequest * childRequest=(ZTKBaseNetRequest*)request;
     
-    NSLog(@"%@", [NSString stringWithFormat:@"Request %@ failed, status code = %ld",
-                  NSStringFromClass([request class]), (long)request.responseStatusCode]);
+//    NSLog(@"%@", [NSString stringWithFormat:@"Request %@ failed, status code = %ld",
+//                  NSStringFromClass([request class]), (long)request.responseStatusCode]);
     
     
     int networkState = 1;
@@ -176,6 +176,10 @@
 - (NSDictionary *)requestHeaderFieldValueDictionary {
     NSMutableDictionary *requestheaders = [[NSMutableDictionary alloc] initWithCapacity:4];
     [requestheaders setValue:@"2" forKey:@"appType"];
+    [requestheaders setValue:@"2" forKey:@"cv"];
+    [requestheaders setValue:@"1" forKey:@"terminal"];
+    [requestheaders setValue:@"06468a6bb89c41f1a5b3c426972963ed" forKey:@"token"];
+
     return requestheaders;
     
 }
