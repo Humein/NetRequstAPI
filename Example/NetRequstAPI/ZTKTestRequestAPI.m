@@ -5,7 +5,7 @@
 //  Created by 鑫鑫 on 2018/4/11.
 //  Copyright © 2018年 shou1wang@gmail.com. All rights reserved.
 //
-#define STR_NET_RETURN_TYPE_ERROR @"返回类型错误"
+#define STR_NET_RETURN_TYPE_ERROR @"https://knightsj.github.io/2017/07/18/YTKNetwork%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/"
 
 #import "ZTKTestRequestAPI.h"
 #import "ZTKRequestModel.h"
@@ -16,6 +16,7 @@
     requestAPI.requestUrl = url1;
     requestAPI.requestMethod = YTKRequestMethodGET;
     requestAPI.requestArgument = dic;
+    requestAPI.cacheTimeInSecond = 5;
     requestAPI.requestCompleteFilterBlock = ^(void) {
         
     };
