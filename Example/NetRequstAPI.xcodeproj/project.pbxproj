@@ -11,6 +11,11 @@
 		334E6586207DB4ED005249B9 /* ZTKBaseNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 334E6585207DB4ED005249B9 /* ZTKBaseNetRequest.m */; };
 		334E6589207DBE6E005249B9 /* ZTKRequestCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 334E6588207DBE6E005249B9 /* ZTKRequestCodeTool.m */; };
 		334E658C207DBF3E005249B9 /* ZTKRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 334E658B207DBF3E005249B9 /* ZTKRequestModel.m */; };
+		33C65BDA20A3DFCF00F1295E /* UIButton+ButtonBlockCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C65BD820A3DFCF00F1295E /* UIButton+ButtonBlockCategory.m */; };
+		33C65BE520A3E30500F1295E /* ZTKDownHelperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C65BE420A3E30500F1295E /* ZTKDownHelperManager.m */; };
+		33C65BE820A3E3AE00F1295E /* ZTKDownItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C65BE720A3E3AE00F1295E /* ZTKDownItem.m */; };
+		33C65BEB20A3F40900F1295E /* ZTKBJDownHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C65BEA20A3F40900F1295E /* ZTKBJDownHelper.m */; };
+		33C65BEE20A3F42500F1295E /* ZTKLLDownHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C65BED20A3F42500F1295E /* ZTKLLDownHelper.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -51,6 +56,17 @@
 		334E6588207DBE6E005249B9 /* ZTKRequestCodeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTKRequestCodeTool.m; sourceTree = "<group>"; };
 		334E658A207DBF3E005249B9 /* ZTKRequestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTKRequestModel.h; sourceTree = "<group>"; };
 		334E658B207DBF3E005249B9 /* ZTKRequestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTKRequestModel.m; sourceTree = "<group>"; };
+		33C65BD820A3DFCF00F1295E /* UIButton+ButtonBlockCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ButtonBlockCategory.m"; sourceTree = "<group>"; };
+		33C65BD920A3DFCF00F1295E /* UIButton+ButtonBlockCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ButtonBlockCategory.h"; sourceTree = "<group>"; };
+		33C65BE020A3E2BD00F1295E /* ZTKDownHelperProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTKDownHelperProtocol.h; sourceTree = "<group>"; };
+		33C65BE320A3E30500F1295E /* ZTKDownHelperManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTKDownHelperManager.h; sourceTree = "<group>"; };
+		33C65BE420A3E30500F1295E /* ZTKDownHelperManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTKDownHelperManager.m; sourceTree = "<group>"; };
+		33C65BE620A3E3AE00F1295E /* ZTKDownItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTKDownItem.h; sourceTree = "<group>"; };
+		33C65BE720A3E3AE00F1295E /* ZTKDownItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTKDownItem.m; sourceTree = "<group>"; };
+		33C65BE920A3F40900F1295E /* ZTKBJDownHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTKBJDownHelper.h; sourceTree = "<group>"; };
+		33C65BEA20A3F40900F1295E /* ZTKBJDownHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTKBJDownHelper.m; sourceTree = "<group>"; };
+		33C65BEC20A3F42500F1295E /* ZTKLLDownHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTKLLDownHelper.h; sourceTree = "<group>"; };
+		33C65BED20A3F42500F1295E /* ZTKLLDownHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTKLLDownHelper.m; sourceTree = "<group>"; };
 		3ED9826324D0B50F95725883 /* Pods-NetRequstAPI_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetRequstAPI_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetRequstAPI_Tests/Pods-NetRequstAPI_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5A1588198DFC2B9FEF3665A9 /* NetRequstAPI.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NetRequstAPI.podspec; path = ../NetRequstAPI.podspec; sourceTree = "<group>"; };
 		5F33FE193706F3818888D994 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -118,6 +134,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		33C65BD720A3DFBB00F1295E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33C65BD920A3DFCF00F1295E /* UIButton+ButtonBlockCategory.h */,
+				33C65BD820A3DFCF00F1295E /* UIButton+ButtonBlockCategory.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		33C65BDB20A3E17400F1295E /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				33C65BE020A3E2BD00F1295E /* ZTKDownHelperProtocol.h */,
+				33C65BE320A3E30500F1295E /* ZTKDownHelperManager.h */,
+				33C65BE420A3E30500F1295E /* ZTKDownHelperManager.m */,
+				33C65BE920A3F40900F1295E /* ZTKBJDownHelper.h */,
+				33C65BEA20A3F40900F1295E /* ZTKBJDownHelper.m */,
+				33C65BEC20A3F42500F1295E /* ZTKLLDownHelper.h */,
+				33C65BED20A3F42500F1295E /* ZTKLLDownHelper.m */,
+				33C65BE620A3E3AE00F1295E /* ZTKDownItem.h */,
+				33C65BE720A3E3AE00F1295E /* ZTKDownItem.m */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +196,8 @@
 		6003F593195388D20070C39A /* Example for NetRequstAPI */ = {
 			isa = PBXGroup;
 			children = (
+				33C65BDB20A3E17400F1295E /* Protocol */,
+				33C65BD720A3DFBB00F1295E /* View */,
 				6003F59C195388D20070C39A /* ZTKAppDelegate.h */,
 				6003F59D195388D20070C39A /* ZTKAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -403,10 +446,15 @@
 			files = (
 				334E658C207DBF3E005249B9 /* ZTKRequestModel.m in Sources */,
 				334E6586207DB4ED005249B9 /* ZTKBaseNetRequest.m in Sources */,
+				33C65BEB20A3F40900F1295E /* ZTKBJDownHelper.m in Sources */,
+				33C65BE820A3E3AE00F1295E /* ZTKDownItem.m in Sources */,
 				6003F59E195388D20070C39A /* ZTKAppDelegate.m in Sources */,
+				33C65BDA20A3DFCF00F1295E /* UIButton+ButtonBlockCategory.m in Sources */,
 				334E6589207DBE6E005249B9 /* ZTKRequestCodeTool.m in Sources */,
 				6003F5A7195388D20070C39A /* ZTKViewController.m in Sources */,
 				334E6583207DB4B7005249B9 /* ZTKTestRequestAPI.m in Sources */,
+				33C65BEE20A3F42500F1295E /* ZTKLLDownHelper.m in Sources */,
+				33C65BE520A3E30500F1295E /* ZTKDownHelperManager.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
