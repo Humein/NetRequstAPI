@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+//DownHelperProtocol
 @protocol ZTKDownHelperProtocol <NSObject>
 
 - (void)down;

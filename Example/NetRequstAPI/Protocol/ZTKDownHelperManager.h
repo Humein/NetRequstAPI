@@ -10,7 +10,7 @@
 #import "ZTKDownItem.h"
 @interface ZTKDownHelperManager : NSObject
 
-- (id) initWithDownItem:(id<HTDownItemProtocol>)downItem;
+- (id) initWithDownItem:(id<HTDownItemProtocol>) downItem;
 
 - (void)down;//下载
 
@@ -18,5 +18,4 @@
 
 - (void)deleteItem;//删除下载
 
-- (void)resume;//再次开启下载
 @end

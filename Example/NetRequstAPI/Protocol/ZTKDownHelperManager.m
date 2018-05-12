@@ -42,7 +42,7 @@
 
 - (void)pause
 {
-    //    [self.downHelper ];
+
 }
 
 - (void)deleteItem

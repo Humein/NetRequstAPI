@@ -7,7 +7,34 @@
 //
 
 #import "ZTKBJDownHelper.h"
+@interface ZTKBJDownHelper()
+@property (nonatomic,strong)ZTKDownItem *downItem;
+@end
 
 @implementation ZTKBJDownHelper
+- (id)initWithDownItem:(ZTKDownItem *)downItem
+{
+    if (self = [super init]) {
+        _downItem = downItem;
+    }
+    return self;
+}
+
+
+- (void)deleteItem {
+    
+}
+
+- (void)down {
+    NSLog(@"111111111");
+}
+
+- (void)resume {
+    
+}
+
+- (void)stop {
+    
+}
 
 @end

@@ -10,6 +10,8 @@
 #import "ZTKViewController.h"
 #import "ZTKTestRequestAPI.h"
 #import "UIButton+ButtonBlockCategory.h"
+#import "ZTKDownHelperManager.h"
+#import "ZTKZTKBJDownItem.h"
 @interface ZTKViewController ()
 
 @end
@@ -46,7 +48,10 @@
 }
 
 -(void)btn2{
-    
+    ZTKZTKBJDownItem *item = [ZTKZTKBJDownItem new];
+    item.itemType = 2;
+    ZTKDownHelperManager *downManger = [[ZTKDownHelperManager alloc]initWithDownItem:item];
+    [downManger down];
 }
 
 

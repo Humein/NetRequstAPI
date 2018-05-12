@@ -10,6 +10,7 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 更新
 1 :  通过协议 多继承
+2 ：  通过  工厂模式     实现协议  实现 管理器
 
 ## Requirements
 

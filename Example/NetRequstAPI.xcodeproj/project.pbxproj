@@ -16,6 +16,7 @@
 		33C65BE820A3E3AE00F1295E /* ZTKDownItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C65BE720A3E3AE00F1295E /* ZTKDownItem.m */; };
 		33C65BEB20A3F40900F1295E /* ZTKBJDownHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C65BEA20A3F40900F1295E /* ZTKBJDownHelper.m */; };
 		33C65BEE20A3F42500F1295E /* ZTKLLDownHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C65BED20A3F42500F1295E /* ZTKLLDownHelper.m */; };
+		33C65BF120A6E13D00F1295E /* ZTKZTKBJDownItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C65BF020A6E13D00F1295E /* ZTKZTKBJDownItem.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -67,6 +68,8 @@
 		33C65BEA20A3F40900F1295E /* ZTKBJDownHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTKBJDownHelper.m; sourceTree = "<group>"; };
 		33C65BEC20A3F42500F1295E /* ZTKLLDownHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTKLLDownHelper.h; sourceTree = "<group>"; };
 		33C65BED20A3F42500F1295E /* ZTKLLDownHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTKLLDownHelper.m; sourceTree = "<group>"; };
+		33C65BEF20A6E13D00F1295E /* ZTKZTKBJDownItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTKZTKBJDownItem.h; sourceTree = "<group>"; };
+		33C65BF020A6E13D00F1295E /* ZTKZTKBJDownItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTKZTKBJDownItem.m; sourceTree = "<group>"; };
 		3ED9826324D0B50F95725883 /* Pods-NetRequstAPI_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetRequstAPI_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetRequstAPI_Tests/Pods-NetRequstAPI_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5A1588198DFC2B9FEF3665A9 /* NetRequstAPI.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NetRequstAPI.podspec; path = ../NetRequstAPI.podspec; sourceTree = "<group>"; };
 		5F33FE193706F3818888D994 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 				33C65BE420A3E30500F1295E /* ZTKDownHelperManager.m */,
 				33C65BE920A3F40900F1295E /* ZTKBJDownHelper.h */,
 				33C65BEA20A3F40900F1295E /* ZTKBJDownHelper.m */,
+				33C65BEF20A6E13D00F1295E /* ZTKZTKBJDownItem.h */,
+				33C65BF020A6E13D00F1295E /* ZTKZTKBJDownItem.m */,
 				33C65BEC20A3F42500F1295E /* ZTKLLDownHelper.h */,
 				33C65BED20A3F42500F1295E /* ZTKLLDownHelper.m */,
 				33C65BE620A3E3AE00F1295E /* ZTKDownItem.h */,
@@ -446,6 +451,7 @@
 			files = (
 				334E658C207DBF3E005249B9 /* ZTKRequestModel.m in Sources */,
 				334E6586207DB4ED005249B9 /* ZTKBaseNetRequest.m in Sources */,
+				33C65BF120A6E13D00F1295E /* ZTKZTKBJDownItem.m in Sources */,
 				33C65BEB20A3F40900F1295E /* ZTKBJDownHelper.m in Sources */,
 				33C65BE820A3E3AE00F1295E /* ZTKDownItem.m in Sources */,
 				6003F59E195388D20070C39A /* ZTKAppDelegate.m in Sources */,
