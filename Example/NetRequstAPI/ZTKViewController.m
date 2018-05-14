@@ -22,16 +22,30 @@
 {
     [super viewDidLoad];
     __weak typeof (self) weakSelf = self;
-    UIButton *btn1 = [UIButton ZTK_fatoryButtonWithFrame:CGRectMake(20, 64, 220, 122) WithTitle:@"请求1" WithTitleColor:[UIColor redColor] Withfont:12 Withimage:nil WithselImage:nil toSuperView:self.view WithClick:^(id sender) {
+
+    UIButton *button = [UIButton createButtonWithFrame:CGRectMake(20, 100, 200, 200) title:@"带块的button" titleColor:[UIColor redColor] bgImageName:@"" actionBlock:^(UIButton *button) {
+//        NSString *str = [button titleForState:UIControlStateNormal];
+//        NSLog(@"%@",str);
         [weakSelf btn1];
+
     }];
+    [self.view addSubview:button];
     
-    
-    
-    UIButton *btn2 = [UIButton ZTK_fatoryButtonWithFrame:CGRectMake(20, 64, 420, 122) WithTitle:@"请求1" WithTitleColor:[UIColor redColor] Withfont:12 Withimage:nil WithselImage:nil toSuperView:self.view WithClick:^(id sender) {
+    UIButton *btn = [UIButton button];
+    btn.frame = CGRectMake(20, 300, 200, 200);
+    [btn setTitle:@"1234" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    btn.actionBlock = ^(UIButton *button) {
+//        NSString *str = [button titleForState:UIControlStateNormal];
+//        NSLog(@"%@",str);
         [weakSelf btn2];
-    }];
+    };
+    [self.view addSubview:btn];
     
+
+    
+
+//
     
     
 	// Do any additional setup after loading the view, typically from a nib.
@@ -39,18 +53,22 @@
 
 
 -(void)btn1{
-    [ZTKTestRequestAPI requestSeckillPayWaWithParameter:nil withSuccess:^(NSString *succMessage, id responseObject, NSInteger succCode) {
-        NSLog(@"%@%@%ld",responseObject,(long)succCode);
-
-    } andFailure:^(NSString *errorMessage, id result, NSInteger errorCode) {
-        NSLog(@"%@%@%ld",errorMessage,result,(long)errorCode);
-    }];
+//    [ZTKTestRequestAPI requestSeckillPayWaWithParameter:nil withSuccess:^(NSString *succMessage, id responseObject, NSInteger succCode) {
+//        NSLog(@"%@%@%ld",responseObject,(long)succCode);
+//
+//    } andFailure:^(NSString *errorMessage, id result, NSInteger errorCode) {
+//        NSLog(@"%@%@%ld",errorMessage,result,(long)errorCode);
+//    }];
+    ZTKZTKBJDownItem *item = [ZTKZTKBJDownItem new];
+    item.itemType = 1;
+    ZTKDownHelperManager *downManger = [[ZTKDownHelperManager sharedDownVideoManager] initWithDownItem:item];
+    [downManger down];
 }
 
 -(void)btn2{
     ZTKZTKBJDownItem *item = [ZTKZTKBJDownItem new];
     item.itemType = 2;
-    ZTKDownHelperManager *downManger = [[ZTKDownHelperManager alloc]initWithDownItem:item];
+    ZTKDownHelperManager *downManger = [[ZTKDownHelperManager sharedDownVideoManager] initWithDownItem:item];
     [downManger down];
 }
 

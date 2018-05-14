@@ -7,80 +7,65 @@
 //
 #import <objc/runtime.h>
 #import "UIButton+ButtonBlockCategory.h"
-static const char associatedButtonkey;
+
+static NSString *keyWithMethod = @"keyWithMethod"; //关联对象的key
+static NSString *keyWithBlock = @"keyWithBlock";
+
 @implementation UIButton (ButtonBlockCategory)
-+ (instancetype)ZTK_fatoryButtonWithFrame:(CGRect)frame
-                               WithTitle:(NSString *)title
-                          WithTitleColor:(UIColor *)titleHexColor
-                                Withfont:(CGFloat)font
-                               Withimage:(id)image
-                            WithselImage:(id)selImage
-                             toSuperView:(UIView *)superView
-                               WithClick:(btnBlock)block{
-    UIButton *btn = [[UIButton alloc] initWithFrame:frame];
-    [superView addSubview:btn];
++ (UIButton *)createButtonWithFrame:(CGRect)frame
+                              title:(NSString *)title
+                         titleColor:(UIColor *)titleColor
+                        bgImageName:(NSString *)bgImgName
+                        actionBlock:(void (^)(UIButton *sender))completion {
     
-    btn.titleLabel.font = [UIFont systemFontOfSize:font];
-    [btn setTitleColor:titleHexColor forState:UIControlStateNormal];
-    if (title) {
-        [btn setTitle:title forState:UIControlStateNormal];
-    }
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = frame;
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setTitleColor:titleColor forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageNamed:bgImgName] forState:UIControlStateNormal];
+    [button addTarget:button action:@selector(buttonTapAction:) forControlEvents:UIControlEventTouchUpInside];
     
-    UIImage *normalImage = nil;
-    if ([image isKindOfClass:[NSString class]]) {
-        normalImage = [UIImage imageNamed:image];
-    } else if ([image isKindOfClass:[UIImage class]]) {
-        normalImage = image;
-    }
+    /*
+     *用runtime中的函数通过key关联对象
+     *
+     *objc_setAssociatedObject(id _Nonnull object, const void * _Nonnull key, id _Nullable value, objc_AssociationPolicy policy)
+     *id object                 表示关联者，是一个对象，变量名也是object
+     *const void *key           获取被关联者的索引
+     *id value                  被关联者，这里是一个block
+     *objc_AssociationPolicy    policy 关联时采用的协议，有assign，retain，copy等协议，一般使用OBJC_ASSOCIATION_RETAIN_NONATOMIC
+     */
+    objc_setAssociatedObject(button, &keyWithMethod, completion, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
-    UIImage *selectedImage = nil;
-    if ([selImage isKindOfClass:[NSString class]]) {
-        selectedImage = [UIImage imageNamed:image];
-    } else if ([selImage isKindOfClass:[UIImage class]]) {
-        selectedImage = selImage;
-    }
-    
-    if (normalImage) {
-        [btn setImage:normalImage forState:UIControlStateNormal];
-    }
-    
-    if (selectedImage) {
-        [btn setImage:selectedImage forState:UIControlStateSelected];
-    }
-    
-    
-    if (block)
-    {
-        //这里调用setter
-        btn.blcok = block;
-    }
-    
-    return btn;
+    return button;
 }
 
-- (void)btnAction:(id)sender{
-    // 这里调用getter
-    self.blcok(sender);
++ (UIButton *)button {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button addTarget:button action:@selector(buttonTapAction:) forControlEvents:UIControlEventTouchUpInside];
+    return button;
 }
 
-// setter
-- (void)setBlcok:(btnBlock)blcok{
-    // 给UIButton 关联一个block
-    objc_setAssociatedObject(self, &associatedButtonkey, blcok, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    [self removeTarget:self
-                action:@selector(btnAction:)
-      forControlEvents:UIControlEventTouchUpInside];
-    
-    if (blcok) {
-        [self addTarget:self
-                 action:@selector(btnAction:)
-       forControlEvents:UIControlEventTouchUpInside];
-    }
+- (void)setActionBlock:(ActionBlock)actionBlock{
+    objc_setAssociatedObject(self, &keyWithBlock, actionBlock, OBJC_ASSOCIATION_COPY_NONATOMIC );
 }
-//getter
-- (btnBlock)blcok{
-    // 之前说过的给起个名字，通过那个名字获取添加的 block
-    return objc_getAssociatedObject(self, &associatedButtonkey);
+
+- (ActionBlock)actionBlock{
+    return objc_getAssociatedObject(self ,&keyWithBlock);
+}
+
+- (void)buttonTapAction:(UIButton *)button {
+    //通过key获取被关联对象
+    //objc_getAssociatedObject(id object, const void *key)
+    void (^tapBlock)(UIButton *) = objc_getAssociatedObject(button, &keyWithMethod);
+    
+    if (tapBlock) {
+        tapBlock(button);
+    }
+    
+    ActionBlock block2 = (ActionBlock)objc_getAssociatedObject(button, &keyWithBlock);
+    if(block2){
+        block2(button);
+    }
 }
 
 @end

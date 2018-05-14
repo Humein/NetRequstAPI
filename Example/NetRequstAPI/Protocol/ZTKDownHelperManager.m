@@ -18,6 +18,18 @@
 @end
 
 @implementation ZTKDownHelperManager
+
++ (instancetype)sharedDownVideoManager
+{
+    static dispatch_once_t pred = 0;
+    __strong static id _sharedObject = nil;
+    dispatch_once(&pred, ^{
+        _sharedObject = [[self alloc] init]; // or some other init method
+    });
+    return _sharedObject;
+}
+
+
 - (id)initWithDownItem:(id<HTDownItemProtocol>)downItem
 {
     if (self = [super init]) {
