@@ -23,13 +23,21 @@
     [super viewDidLoad];
     __weak typeof (self) weakSelf = self;
 
-    UIButton *button = [UIButton createButtonWithFrame:CGRectMake(20, 100, 200, 200) title:@"带块的button" titleColor:[UIColor redColor] bgImageName:@"" actionBlock:^(UIButton *button) {
-//        NSString *str = [button titleForState:UIControlStateNormal];
-//        NSLog(@"%@",str);
+    UIButton *button = [UIButton createButtonWithFrame:CGRectMake(20, 100, 44, 44) title:@"开始" titleColor:[UIColor redColor] bgImageName:@"" actionBlock:^(UIButton *button) {
+
         [weakSelf btn1];
 
     }];
     [self.view addSubview:button];
+    
+    
+    UIButton *button1 = [UIButton createButtonWithFrame:CGRectMake(64, 100, 44, 44) title:@"开始" titleColor:[UIColor redColor] bgImageName:@"" actionBlock:^(UIButton *button) {
+
+        [weakSelf btn1];
+        
+    }];
+    [self.view addSubview:button1];
+    
     
     UIButton *btn = [UIButton button];
     btn.frame = CGRectMake(20, 300, 200, 200);
@@ -61,14 +69,14 @@
 //    }];
     ZTKZTKBJDownItem *item = [ZTKZTKBJDownItem new];
     item.itemType = 1;
-    ZTKDownHelperManager *downManger = [[ZTKDownHelperManager sharedDownVideoManager] initWithDownItem:item];
+    ZTKDownHelperManager *downManger = [[ZTKDownHelperManager alloc] initWithDownItem:item];
     [downManger down];
 }
 
 -(void)btn2{
     ZTKZTKBJDownItem *item = [ZTKZTKBJDownItem new];
     item.itemType = 2;
-    ZTKDownHelperManager *downManger = [[ZTKDownHelperManager sharedDownVideoManager] initWithDownItem:item];
+    ZTKDownHelperManager *downManger = [[ZTKDownHelperManager alloc] initWithDownItem:item];
     [downManger down];
 }
 

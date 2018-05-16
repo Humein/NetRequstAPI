@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ZTKDownItem.h"
 @interface ZTKDownHelperManager : NSObject
-+ (instancetype)sharedDownVideoManager;
+//+ (instancetype)sharedDownVideoManager;
 
 - (id) initWithDownItem:(id<HTDownItemProtocol>) downItem;
 
