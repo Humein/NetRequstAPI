@@ -29,8 +29,9 @@
 
 - (void)down {
     NSLog(@"111111111");
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(StartDown) userInfo:nil repeats:YES];
-    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(StartDown) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+
 
 }
 
@@ -42,6 +43,11 @@
     [self.timer invalidate];
     self.timer = nil;
 }
+
+- (NSArray *)performQuery:(NSString *)query {
+    return @[@"1",@"1"];
+}
+
 
 -(void)StartDown{
 

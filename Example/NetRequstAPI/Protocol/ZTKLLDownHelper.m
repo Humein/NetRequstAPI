@@ -9,6 +9,7 @@
 #import "ZTKLLDownHelper.h"
 @interface ZTKLLDownHelper()
 @property (nonatomic,strong)ZTKDownItem *downItem;
+@property (nonatomic, strong)  NSTimer  *timer;
 @end
 
 @implementation ZTKLLDownHelper
@@ -25,15 +26,25 @@
 
 - (void)down {
     NSLog(@"222222");
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(StartDown) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 
 }
-
+-(void)StartDown{
+    
+    NSLog(@"<<<<<<<");
+    
+}
 - (void)resume {
     
 }
+- (NSArray *)performQuery:(NSString *)query {
+    return @[@"2",@"2"];
+}
 
 - (void)stop {
-    
+    [self.timer invalidate];
+    self.timer = nil;
 }
 
 

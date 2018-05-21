@@ -13,7 +13,6 @@
 #import "ZTKDownHelperManager.h"
 #import "ZTKZTKBJDownItem.h"
 @interface ZTKViewController ()
-
 @end
 
 @implementation ZTKViewController
@@ -31,9 +30,9 @@
     [self.view addSubview:button];
     
     
-    UIButton *button1 = [UIButton createButtonWithFrame:CGRectMake(64, 100, 44, 44) title:@"开始" titleColor:[UIColor redColor] bgImageName:@"" actionBlock:^(UIButton *button) {
+    UIButton *button1 = [UIButton createButtonWithFrame:CGRectMake(64, 100, 44, 44) title:@"停止" titleColor:[UIColor redColor] bgImageName:@"" actionBlock:^(UIButton *button) {
 
-        [weakSelf btn1];
+        [weakSelf btn3];
         
     }];
     [self.view addSubview:button1];
@@ -69,15 +68,19 @@
 //    }];
     ZTKZTKBJDownItem *item = [ZTKZTKBJDownItem new];
     item.itemType = 1;
-    ZTKDownHelperManager *downManger = [[ZTKDownHelperManager alloc] initWithDownItem:item];
-    [downManger down];
+    [[ZTKDownHelperManager sharedDownVideoManager] downLoadDownItem:item];
+    [[ZTKDownHelperManager sharedDownVideoManager] down];
+}
+
+-(void)btn3{
+    [[ZTKDownHelperManager sharedDownVideoManager] pause];
 }
 
 -(void)btn2{
     ZTKZTKBJDownItem *item = [ZTKZTKBJDownItem new];
     item.itemType = 2;
-    ZTKDownHelperManager *downManger = [[ZTKDownHelperManager alloc] initWithDownItem:item];
-    [downManger down];
+    [[ZTKDownHelperManager sharedDownVideoManager] downLoadDownItem:item];
+    [[ZTKDownHelperManager sharedDownVideoManager] down];
 }
 
 

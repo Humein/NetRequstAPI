@@ -17,4 +17,6 @@
 - (void)resume;
 
 - (void)deleteItem;
+
+-(NSArray *)performQuery:(NSString *)query;
 @end
