@@ -27,4 +27,5 @@
 
 - (void)deleteItem;//删除下载
 
+-(NSArray *)performQuery:(NSString *)query;
 @end

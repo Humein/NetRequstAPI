@@ -56,10 +56,12 @@
         
         _downHelper = [[ZTKBJDownHelper alloc] initWithDownItem:tmpItem];
         
+        
     }else{
         
         _downHelper = [[ZTKLLDownHelper alloc] initWithDownItem:tmpItem];
     }
+    [self down];
     return _downHelper;
     
 }
@@ -80,5 +82,8 @@
     [self.downHelper deleteItem];
 }
 
+-(NSArray *)performQuery:(NSString *)query{
+    return [self.downHelper performQuery:query];
+}
 
 @end

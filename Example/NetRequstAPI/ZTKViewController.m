@@ -68,8 +68,8 @@
 //    }];
     ZTKZTKBJDownItem *item = [ZTKZTKBJDownItem new];
     item.itemType = 1;
+    [[ZTKDownHelperManager sharedDownVideoManager] pause];
     [[ZTKDownHelperManager sharedDownVideoManager] downLoadDownItem:item];
-    [[ZTKDownHelperManager sharedDownVideoManager] down];
 }
 
 -(void)btn3{
@@ -79,13 +79,14 @@
 -(void)btn2{
     ZTKZTKBJDownItem *item = [ZTKZTKBJDownItem new];
     item.itemType = 2;
+    [[ZTKDownHelperManager sharedDownVideoManager] pause];
     [[ZTKDownHelperManager sharedDownVideoManager] downLoadDownItem:item];
-    [[ZTKDownHelperManager sharedDownVideoManager] down];
 }
 
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
+    NSLog(@"%@",[[ZTKDownHelperManager sharedDownVideoManager] performQuery:@""]);
 
 }
 - (void)didReceiveMemoryWarning
